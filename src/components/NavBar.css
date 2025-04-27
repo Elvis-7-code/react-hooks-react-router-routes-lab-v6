@@ -10,6 +10,12 @@
     font-size: min(10vw, 15px) ;
     color: black;
 }
+
+.navbar a {
+    color: white;
+    margin-right: 1rem;
+    text-decoration: none;
+}
   
 a.active {
     background: black;

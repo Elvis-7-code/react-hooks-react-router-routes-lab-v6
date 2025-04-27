@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function MovieCard({movie}) {
   
@@ -8,6 +9,12 @@ function MovieCard({movie}) {
         <Link to={'/movie/${movie.id}'}>View Info</Link>
     </div>
   );
+};
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  }).isRequired,
 };
 
 export default MovieCard;
