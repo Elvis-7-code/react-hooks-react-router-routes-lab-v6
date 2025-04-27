@@ -18,13 +18,14 @@ test('wraps content in a div with "navbar" class', () => {
   expect(container.querySelector(".navbar")).toBeInTheDocument();
 });
 
+div
 test("renders a Home <NavLink>", async () => {
   const a = screen.queryByText(/Home/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
   expect(a.href).toContain("/");
-
+  </div>
   fireEvent.click(a, { button: 0 });
 
   expect(a.classList).toContain("active");
@@ -34,7 +35,7 @@ test("renders a Actors <NavLink>", async () => {
   const a = screen.queryByText(/Actors/);
 
   expect(a).toBeInTheDocument();
-  expect(a.tagName).toBe("A");
+  expect(a.tagName).toBeInTheDocument("A");
   expect(a.href).toContain("/");
 
   fireEvent.click(a, { button: 0 });

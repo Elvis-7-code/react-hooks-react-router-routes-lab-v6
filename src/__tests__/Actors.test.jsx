@@ -27,6 +27,7 @@ const actors = [
 ];
 
 const router = createMemoryRouter(routes, {
+  
   initialEntries: [`/actors`],
   initialIndex: 0
 })
